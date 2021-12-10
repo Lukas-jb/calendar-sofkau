@@ -1,36 +1,37 @@
-{
-  "id": "xxxx",
-  "name": "Programa 2022",
-  "courses": [
-    {
-      "courseId": "xxx-z",
-      "courseName": "Introducción",
-      "categories": [
-        {
-          "categoryId": "1",
-          "days": 2,
-          "categoryName": "Principios",
-          "urlsRefGradles": []
-        },
-        {
-          "categoryId": "2",
-          "days": 2,
-          "categoryName": "Bases",
-          "urlsRefGradles": []
-        },
-        {
-          "categoryId": "3",
-          "days": 4,
-          "categoryName": "Fundamentos",
-          "urlsRefGradles": []
-        },
-        {
-          "categoryId": "3",
-          "days": 5,
-          "categoryName": "Fundamentos avazandos",
-          "urlsRefGradles": []
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "Programa 2022",
+    "courses": [
+      {
+        "courseId": "xxx-z",
+        "courseName": "Introducción",
+        "categories": [
+          {
+            "categoryId": "1",
+            "days": 2,
+            "categoryName": "Principios",
+            "urlsRefGradles": []
+          },
+          {
+            "categoryId": "2",
+            "days": 2,
+            "categoryName": "Bases",
+            "urlsRefGradles": []
+          },
+          {
+            "categoryId": "3",
+            "days": 4,
+            "categoryName": "Fundamentos",
+            "urlsRefGradles": []
+          },
+          {
+            "categoryId": "3",
+            "days": 5,
+            "categoryName": "Fundamentos avazandos",
+            "urlsRefGradles": []
+          }
+        ]
+      }
+    ]
+  }
+]

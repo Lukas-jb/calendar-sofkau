@@ -112,7 +112,7 @@ class SchedulerServiceTest {
 
         Flux<ProgramDate> response = schedulerService.generateCalendar(programId, startDate);
 
-        StepVerifier.create(response).expectErrorMessage("El programa academico no existe").verify();//TODO: hacer de otro modo
+        StepVerifier.create(response).expectErrorMessage("El programa academico no existe").verify();//Done: hacer de otro modo
 
         Mockito.verify(repository).findById(programId);
 
