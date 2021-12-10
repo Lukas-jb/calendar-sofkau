@@ -32,7 +32,7 @@ class SchedulerServiceTest {
 
 
     @Test
-        //TODO: modificar el test para que el act sea reactivo, usando stepverifier
+        //DONE: modificar el test para que el act sea reactivo, usando stepverifier
     void generateCalendar() {
         var programId = "xxxx";
         var startDate = LocalDate.of(2022, 1, 1);
@@ -40,9 +40,11 @@ class SchedulerServiceTest {
         Program program = getProgramDummy();
 
         Mockito.when(repository.findById(programId)).thenReturn(Mono.just(program));
-        //TODO: hacer una subscripción de el servicio reactivo
+
+        //DONE: hacer una subscripción de el servicio reactivo
         Flux<ProgramDate> response = schedulerService.generateCalendar(programId, startDate);
 
+        //DONE: hacer de otro modo
         StepVerifier.create(response).expectNextMatches(programDate -> {
                     return programDate.getDate().toString().equals("2022-01-03")
                             && programDate.getCategoryName().equals("Principios");
@@ -98,10 +100,7 @@ class SchedulerServiceTest {
                 .verifyComplete();
 
         StepVerifier.create(response).expectNextCount(13).verifyComplete();//DONE: hacer de otro modo
-
-        ;
-        //Assertions.assertEquals(getSnapResult(), new Gson().toJson(response));//TODO: hacer de otro modo
-        //Mockito.verify(repository).findById(programId);
+        Mockito.verify(repository).findById(programId);
     }
 
     @Test
